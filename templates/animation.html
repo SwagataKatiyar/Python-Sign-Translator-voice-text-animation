@@ -1,0 +1,631 @@
+
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+  
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+     {% load static %}
+     <link rel="stylesheet" href="{% static 'sidebar.css' %}" >
+   
+        
+{% block content %}
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+
+{% comment %} .ani-container{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+   
+    margin-left:20px;
+    background: rgb(231 228 228);
+} {% endcomment %}
+
+.container{
+    height: 96vh;
+    width: 90vw;
+    margin-left:20px;
+    margin-right:20px;
+    align-items: center;
+  justify-content: center;
+    margin-bottom:10px;
+    display:flex;
+
+   
+    border-radius: 6px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.01);
+  }
+  .wrapper{
+    border-radius: 5px;
+    display:flex;
+    background: #FFFFFF;
+    max-width:1500px;
+    border: 1px solid #ccc;
+  }
+
+.split{
+    border-radius: 4px;
+    {% comment %} box-shadow: 0px 0px 1px 1px lightgrey; {% endcomment %}
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.left{
+    height: 90vh;
+    width:40vw;
+    margin: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.right{
+    background: #FFFFFF;
+    height: 85vh;
+    width: 45vw;
+    border-radius: 4px;
+    box-shadow: 0px 0px 1px 1px lightgrey;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    overflow: hidden;
+    margin-left:10px;
+    margin-top:12px;
+    margin-right:15px;
+    border: 1px solid #002333;
+    {% comment %} visibility: hidden; {% endcomment %}
+}
+.heading-container{
+    height: 10vh;
+    width: 36vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5px;
+}
+.heading-template{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.line{
+    height: 6px;
+    width: 5vw;
+    border-top: 2px solid #103825;
+    margin-top: 2px;
+}
+.heading{
+    font-weight: 600;
+    font-size: x-large;
+}
+.try-button{
+    width: 7%;
+    background: white;
+    color: black;
+    height: 7%;
+    margin: 15px;
+    position: absolute;
+    top: 0px;
+}
+.form-mic{
+    height: 10vh;
+    width: 30vw;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+
+.mytext{
+    outline: none;
+    height: 60%;
+    width: 85%; 
+    background-color: white;
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    padding: 8px;
+    padding-right: 48px;
+    
+}
+.mic{
+    height: 60%;
+    width: 100%;
+    border-radius: 20px;
+    background: transparent;
+    margin-left: -33px;
+    border: 0px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pulse{
+    content: '';
+    width: 7%;
+    height: 44%;
+    border-radius: ;
+}
+
+
+.submit-hello{
+    height: 60%;
+    width: 25%;
+  
+    background-color: #04AA6D;
+    border: none;
+    color: white;
+    
+    text-decoration: none;
+    margin-left: 24px;
+    cursor: pointer;
+    
+}
+
+.mic-pic{
+    margin: 1px;
+    font-size: 20px;
+    color: #002333;
+}
+
+.pulse-ring {
+    content: '';
+    width: 7%;
+    height: 44%;
+    border-radius: 50%;
+    animation: pulsate infinite 1.5s;
+}
+
+{% comment %} .pulse-ring{
+	background: transparent;
+} {% endcomment %}
+
+.pulse-ring.delay{
+	// animation-delay: 1s;
+}
+
+@-webkit-keyframes pulsate {
+  0% {
+    -webkit-transform: scale(1, 1);
+    {% comment %} opacity: 1; {% endcomment %}
+  }
+  100% {
+    -webkit-transform: scale(1.2, 1.2);
+    {% comment %} opacity: 0.9; {% endcomment %}
+    {% comment %} border: 1px solid darkgrey; {% endcomment %}
+  }
+}
+
+.table-container{
+    height: 95%;
+    width: 90%;
+    margin:10px;
+    border: 1px solid grey;
+    margin-top: 9px;
+    overflow: hidden;
+    background: white;
+
+}
+.table-words{
+    color: #002333;
+    width: 100%;
+}
+.words{
+
+}
+.left-A{
+    height: 30%;
+    width: 100%;
+    background: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    
+    border: 1px solid Grey;
+}
+.left-B{
+    height: 95%;
+    width: 100%;
+    background: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 30px;
+    border: 1px solid Grey;
+}
+.submit-next{
+    height: 11%;
+    width: 75%;
+    background-color: #04AA6D;
+    border: none;
+    color: white;
+    
+    text-decoration: none;
+    margin: 14px;
+    cursor: pointer;
+}
+.table-row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 5px;
+}
+
+svg#play {
+    width: 15%;
+    height: 15%;
+    display: block;
+    cursor: pointer;
+    position: relative;
+    left: -245px;
+    margin: 10px;
+    transform-origin: 50% 50%;
+}
+
+  
+  svg#play #triangle {
+    fill:#04AA6D;
+    transition:500ms;
+    transform-origin: 50% 50%;
+  }
+  svg#play:hover #triangle {
+    fill: #103825;
+    
+    transform-origin: 50% 50%;
+  }
+  
+   svg #lineOne, svg #lineTwo {
+    transform-origin: 50% 50%;
+    transition: 1s;
+  } 
+  
+   svg:hover #lineOne {
+    transform: rotate(260deg);
+     -webkit-transform: rotate(260deg);
+  -moz-transform: rotate(260deg);
+  -o-transform: rotate(260deg);
+     transform-origin: 50% 50%;
+  } 
+  
+   svg:hover #lineTwo {
+    transform: rotate(-450deg);
+     transform-origin: 50% 50%;
+  } 
+
+  .animation-container{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .animation-innercontainer{
+    height: 100%;
+    
+    width: 100%;
+    display: flex;    
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: whitesmoke; 
+  }
+  .videomp3{
+    height: 80%;
+    width: 100%;
+  }
+.hide{
+    display: none !important;
+}
+#play-g{
+    height: 8vh;
+    /* background: black; */
+    width: 4vw;
+    /* border-bottom: 1px solid black; */
+    margin-bottom: 20px;
+}
+{% comment %} Slide {% endcomment %}
+#slider {
+    transform: translateX(-100%);
+    -webkit-transform: translateX(-100%);
+}
+
+.slide-in {
+    animation: slide-in 0.5s forwards;
+    -webkit-animation: slide-in 0.5s forwards;
+}
+
+.slide-out {
+    animation: slide-out 0.5s forwards;
+    -webkit-animation: slide-out 0.5s forwards;
+}
+    
+@keyframes slide-in {
+    100% { transform: translateX(0%); }
+}
+
+@-webkit-keyframes slide-in {
+    100% { -webkit-transform: translateX(0%); }
+}
+    
+@keyframes slide-out {
+    0% { transform: translateX(0%); }
+    100% { transform: translateX(-100%); }
+}
+
+@-webkit-keyframes slide-out {
+    0% { -webkit-transform: translateX(0%); }
+    100% { -webkit-transform: translateX(-100%); }
+}
+#toggle{
+    margin: 10px auto;
+    position: relative;
+    top: -64px;
+    left: 73px;
+}
+.gInner{
+    
+
+}
+</style>
+</head>
+
+<body>
+
+
+            <div class="sidebar">
+                <div class="logo-details">
+                 
+                    <i class='bx bx-menu' id="btn" ></i>
+                </div>
+                <ul class="nav-list">
+                 
+                         
+          <li>
+            <a href="/">
+             
+              <i class=' bx bxs-home'></i>
+              <span class="links_name">Dashboard</span>
+            </a>
+            <span class="tooltip">Dashboard</span>
+          </li>
+          <li>
+          
+                 
+                  
+                
+            
+                 
+                
+                </ul>
+              </div>
+  <section class="home-section">
+<div class="container">
+    <div class="wrapper">
+    <div class="split left">
+        <div class="left-A">
+            <div class="heading-container">
+                <div class="heading-template">
+                    <div class="line"></div> 
+                    <div class="heading">Translator</div>
+                    <div class="line"></div> 
+                </div>
+            </div>
+            <form action="" method="post" align="left" class='form-mic'>
+                {% csrf_token %}
+                            <input type="text" name="sen" class="mytext" id="speechToText" placeholder=" Type here...">
+                            <button type="button" name="button" class="mic pulse" onclick="myFunc()">
+                                <i class="fa fa-microphone mic-pic"></i>
+                                {% comment %} <img class='mic-pic' src ="{% static 'mic1.aep' %}"/> {% endcomment %}
+                            </button>
+                            &nbsp&nbsp&nbsp&nbsp
+                            <input type="submit" name="submit" class="submit-hello">
+                            
+            </form>
+        </div>
+        
+        <div class="left-B">
+            <div class="table-container">
+                <table class="table-words" cellspacing="25px">
+                    <tr class="table-row">
+                        <td class="td"><b>Text: </b></td>
+                        <td class="td" style="font-size: medium;
+                        font-style: italic;">{{ text }}</td>
+                    </tr>
+                    <tr class="table-row">
+                        <td class="td" style="margin-right:2px"><b>Keywords Used:  </b></td>
+                        <td class="td words">
+                            <ul class="td" id="list" align="left">
+                                {% for word in words %}
+                                <li id="{{ i }}" 
+                                style="margin-right: 8px;
+                                    color: crimson;
+                                    margin-left: 4px;
+                                    font-size: 16px;">{{ word }}</li>
+                                {% endfor %}
+                            </ul>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+           
+            <button type="button" name="next" class="submit-next">Next</button> 
+            
+            
+
+        </div>
+
+        
+        {% comment %} <div class="try-button"  id="toggle" onclick="play()">Try Video</div> {% endcomment %}
+    </div>
+    
+     <div class="split right hide" id="rightBox">
+        
+        <div class="animation-container">
+
+             
+
+           {% comment %} <div id="slider" class="slide-in"> {% endcomment %}
+                <div class="animation-innercontainer">
+                    
+                    <div class="heading-container">
+                        <div class="heading-template">
+                            <div class="line"></div>
+                            <div class="heading">Animation</div>
+                            <div class="line"></div>
+                        </div>
+                    </div> 
+                    
+                    <video id="videoPlayer" class="videomp3"  preload="auto" autoplay>
+                        <source src="" type="video/mov">
+                         
+                    </video> 
+                
+                    <svg id="play" class="playBtn"  viewBox="0 0 163 163" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"="0px">
+                        <g id="play-g" fill="none" style="">
+                            <g class="gInner" transform="translate(2.000000, 2.000000)" stroke-width="4">
+                                <path  d="M10,80 C10,118.107648 40.8923523,149 79,149 L79,149 C117.107648,149 148,118.107648 148,80 C148,41.8923523 117.107648,11 79,11" id="lineOne" stroke="#002333"></path>
+                                <path d="M105.9,74.4158594 L67.2,44.2158594 C63.5,41.3158594 58,43.9158594 58,48.7158594 L58,109.015859 C58,113.715859 63.4,116.415859 67.2,113.515859 L105.9,83.3158594 C108.8,81.1158594 108.8,76.6158594 105.9,74.4158594 L105.9,74.4158594 Z" id="triangle" stroke="#002333"></path>
+                                <path d="M159,79.5 C159,35.5933624 123.406638,0 79.5,0 C35.5933624,0 0,35.5933624 0,79.5 C0,123.406638 35.5933624,159 79.5,159 L79.5,159" id="lineTwo" stroke="#002333"></path>
+                            </g>
+                        </g>
+                    </svg> 
+                </div>
+            {% comment %} </div>   {% endcomment %}
+        
+    </div> 
+</div>
+</div>
+</section>
+
+<script src="{% static 'sidebar.js' %}"> </script>
+
+
+   <script>
+        var nextButton = document.querySelector(".submit-next");
+        var recognition = new webkitSpeechRecognition();
+        var slider = document.getElementById('slider');
+        var toggle = document.getElementById('toggle');
+        var playButton = document.querySelector('.playBtn');
+        var rightBox = document.querySelector("#rightBox");
+        
+        
+        {% comment %} toggle.addEventListener('click', function() {
+            var isOpen = slider.classList.contains('slide-in');
+        
+            slider.setAttribute('class', isOpen ? 'slide-out' : 'slide-in');
+        });  {% endcomment %}
+
+        playButton.addEventListener('click', function(event){
+            console.log("play is clicked");
+            play();
+
+        })
+
+       nextButton.addEventListener("click", function(event){
+            if(rightBox.classList.contains("hide")){
+                rightBox.classList.remove("hide");
+                
+            }else{
+                rightBox.classList.add("hide");
+            }
+            event.preventDefault();
+
+            }) 
+             
+
+        function myFunc(){
+            var button = document.querySelector(".mic.pulse");
+            if(button.classList.contains("pulse-ring")){
+                button.classList.remove("pulse-ring");
+                recognition.stop();
+            }else{
+                button.classList.add("pulse-ring");
+                record();
+            }
+        } 
+
+    function record(){
+		
+		recognition.lang='en-IN';
+		recognition.onresult = function(event){
+			console.log(event);
+            console.log(event.results[0][0].transcript);
+			document.getElementById('speechToText').value = event.results[0][0].transcript;
+		}
+		recognition.start();
+	 }
+
+
+
+	function play()
+	{
+		var videoSource = new Array();
+		var	videos = document.getElementById("list").getElementsByTagName("li");
+        console.log(videos);
+		var j;
+		for(j=0;j<videos.length;j++)
+		{
+			videoSource[j] = "/static/" + videos[j].innerHTML +".mov";
+		}
+
+		var i = 0; // define i
+		var videoCount = videoSource.length;
+
+		function videoPlay(videoNum)
+		{
+			document.getElementById("list").getElementsByTagName("li")[videoNum].style.color = "#09edc7";
+			document.getElementById("list").getElementsByTagName("li")[videoNum].style.fontSize = "xx-large";
+			document.getElementById("videoPlayer").setAttribute("src", videoSource[videoNum]);
+	    	document.getElementById("videoPlayer").load();
+	    	document.getElementById("videoPlayer").play();
+
+		}
+		document.getElementById('videoPlayer').addEventListener('ended', myHandler, false);
+		document.getElementById("list").getElementsByTagName("li")[0].style.color = "#09edc7";
+		document.getElementById("list").getElementsByTagName("li")[0].style.fontSize = "xx-large";
+
+		videoPlay(0); // play the video
+
+		function myHandler()
+		{
+	 		document.getElementById("list").getElementsByTagName("li")[i].style.color = "#feda6a";
+			document.getElementById("list").getElementsByTagName("li")[i].style.fontSize = "20px";
+			i++;
+	    	if (i == videoCount)
+	    	{
+	       	    document.getElementById("videoPlayer").pause();
+	    	}
+	     	else
+	     	{
+	        	videoPlay(i);
+	    	}
+		}
+	}
+
+    function playPause(){
+        if (document.getElementById("videoPlayer").paused){
+          play();}
+        else{
+          document.getElementById("videoPlayer").pause();}
+      }
+
+
+     
+
+</script>
+</body>
+
+</html> 
+
+{% endblock %}
